@@ -31,10 +31,19 @@ public class TarefasController {
 	}
 	
 	
+	
 	@RequestMapping("listaTarefas")
 	public String lista (Model model) {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		model.addAttribute("tarefas", dao.lista());
 		return "tarefa/lista";
+	}
+	
+	
+	@RequestMapping("removeTarefa")
+	public String remove(Tarefa tarefa) {
+		JdbcTarefaDao dao = new JdbcTarefaDao();
+		dao.remove(tarefa);
+		return "redirect:listaTarefas";
 	}
 }
