@@ -1,8 +1,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="dataTag" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+
+	<link href="resources/js/jquery.css" rel="stylesheet"/>
+	<script type="text/javascript" src="resources/js/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+
 <head>
 <meta charset="ISO-8859-1">
 <title>mostra</title>
@@ -16,9 +22,7 @@
 		Descrição:
 		<br>
 		
-		<textarea name="descricao"  cols="10" rows="5">
-			<%-- ${tarefa.descricao} --%>
-		</textarea>
+		<textarea name="descricao" rows="5" cols="50"></textarea>
 		
 		<br>
 		
@@ -30,9 +34,8 @@
 		Data de finalização:
 		<br>
 		
-		<input type="text" name="dataFinalizacao"
-	    value="<fmt:formatDate value="${tarefa.dataFinalizacao.time}" 
-	 	pattern= "dd/MM/yyyy"/>">	
+		<dataTag:campoData id="dataFinalizacao" />
+	 	
 	 	<br>
 	 	
 	 	<input type="submit" value="Alterar">

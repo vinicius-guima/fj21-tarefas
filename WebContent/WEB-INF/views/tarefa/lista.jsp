@@ -15,8 +15,8 @@
 
 	<script type="text/javascript">
 		function finalizaAgora(id) {
-			$.post("finalizaTarefa", {'id' : id},function(){
-				$("#taefa_"+id).html("Finalzado");
+			$.post("finalizaTarefa", {'id' : id}, function(){
+				$("#tarefa_"+id).html("Finalizado");
 			});
 		}
 	</script>
@@ -43,7 +43,7 @@
 				    </td>
 				</c:if>
 				<c:if test="${tarefa.finalizado eq true}">
-				<td>finalizado</td>
+				<td>Finalizado</td>
 				</c:if>
 				<td>
 					<fmt:formatDate value="${tarefa.dataFinalizacao.time}"
