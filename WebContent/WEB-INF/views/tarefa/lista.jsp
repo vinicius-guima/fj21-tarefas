@@ -13,6 +13,14 @@
 </head>
 <body>
 
+	<script type="text/javascript">
+		function finalizaAgora(id) {
+			$.post("finalizaTarefa", {'id' : id},function(){
+				$("#taefa_"+id).html("Finalzado");
+			});
+		}
+	</script>
+
 	<a href="novaTarefa">Criar nova tarefa</a>
 	<br>
 	<br>
@@ -31,7 +39,7 @@
 				<td>${tarefa. descricao}</td>
 				<c:if test="${tarefa.finalizado eq false}">
 					<td id="tarefa_${tarefa.id}">
-						<a href="#" onclick="FinalizaAgora(${tarefa.id})">Finalizar Agora</a>
+						<a href="#" onclick="finalizaAgora(${tarefa.id})">Finalizar Agora!</a>
 				    </td>
 				</c:if>
 				<c:if test="${tarefa.finalizado eq true}">
