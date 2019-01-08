@@ -4,9 +4,12 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+
+	<script type="text/javascript" src="resources/js/jquery.js"></script>
+
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista-tarefas</title>
 </head>
 <body>
 
@@ -27,7 +30,9 @@
 				<td>${tarefa.id}</td>
 				<td>${tarefa. descricao}</td>
 				<c:if test="${tarefa.finalizado eq false}">
-					<td>não finalizado</td>
+					<td id="tarefa_${tarefa.id}">
+						<a href="#" onclick="FinalizaAgora(${tarefa.id})">Finalizar Agora</a>
+				    </td>
 				</c:if>
 				<c:if test="${tarefa.finalizado eq true}">
 				<td>finalizado</td>
