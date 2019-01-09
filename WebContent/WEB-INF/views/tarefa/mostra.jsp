@@ -4,7 +4,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-
+	<link type="text/css" href="resources/css/tarefas.css" rel=stylesheet>
 	<link href="resources/js/jquery.css" rel="stylesheet"/>
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>

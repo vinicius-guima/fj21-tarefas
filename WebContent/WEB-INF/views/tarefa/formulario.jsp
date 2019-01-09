@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link type="text/css" href="resources/css/tarefas.css" rel=stylesheet>
 <meta charset="ISO-8859-1">
 <title>adiciona tarefas</title>
 </head>
