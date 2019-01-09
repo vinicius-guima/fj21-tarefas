@@ -9,8 +9,7 @@
 <body>
 	<h2>Pagina inicial da lista de Tarefas</h2>
 	
-	<p>Seja bem vindo</p>
-	
-	<a href="listaTarefas">Click aqui</a> para acessar  a lista de tarefas
+	<p>Bem Vindo, ${usuario.login}</p>
+	<a href="listaTarefas">Click aqui</a> para acessar a lista de tarefas
 </body>
 </html>

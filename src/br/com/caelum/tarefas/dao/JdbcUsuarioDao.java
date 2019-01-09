@@ -22,7 +22,7 @@ public class JdbcUsuarioDao {
 	public boolean existeUsuario(Usuario usuario) {
 
 		if (usuario == null) {
-			throw new IllegalArgumentException("Usuário não deve ser nulo");
+			throw new IllegalArgumentException("Usuario n�o deve ser nulo");
 		}
 
 		try {
