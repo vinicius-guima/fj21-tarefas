@@ -37,7 +37,7 @@ public class TarefasController {
 			return "tarefa/formulario";
 		}
 		dao.adiciona(tarefa);
-		return "tarefa/adicionada";
+		return "redirect:listaTarefas";
 	}
 	
 	
