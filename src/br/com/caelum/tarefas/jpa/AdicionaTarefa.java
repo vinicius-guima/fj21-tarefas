@@ -13,8 +13,8 @@ public class AdicionaTarefa {
 	public static void main(String[] args) {
 		
 		Tarefa tarefa = new Tarefa();
-		tarefa.setDescricao("Estudar JPA e Hibernate ");
-		tarefa.setFinalizado(true);
+		tarefa.setDescricao("1 Estudar JPA e Hibernate ");
+		tarefa.setFinalizado(false);
 		tarefa.setDataFinalizacao(Calendar.getInstance());
 		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tarefas");
