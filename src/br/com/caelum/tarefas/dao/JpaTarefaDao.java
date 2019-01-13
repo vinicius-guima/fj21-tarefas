@@ -21,9 +21,10 @@ public class JpaTarefaDao implements TarefaDao {
 		return manager.find(Tarefa.class, id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Tarefa> lista() {
-		return manager.createNamedQuery("select t from Tarefa t").getResultList();
+		return manager.createQuery("select t from Tarefa t").getResultList();
 	}
 
 	@Override
